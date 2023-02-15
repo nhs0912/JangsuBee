@@ -1,0 +1,30 @@
+server:
+  port: 8888
+
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    url: jdbc:h2:mem:jangsubeedb;NON_KEYWORDS=USER
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: false
+
+  security:
+    user:
+      name: nhs0912
+      password: 1234
+
+logging:
+  level:
+    com.jangsubee: TRACE
+  jwt:
+    header:   Authorization
+    secret: amFuZ3N1YmVlIENhbGVuZGFyIFByb2plY3QgbWFkZSBieSBuaHMwOTEyIAo=
+    token-validity-in-seconds: 86400 #24 hours
