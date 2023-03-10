@@ -1,5 +1,7 @@
 /gradle/
 idea/misc.xml
+.idea/jpa-buddy.xml
+.idea/sqldialects.xml
 # Created by https://www.toptal.com/developers/gitignore/api/java,gradle
 # Edit at https://www.toptal.com/developers/gitignore?templates=java,gradle
 
