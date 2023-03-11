@@ -11,7 +11,11 @@ spring:
     driver-class-name: org.h2.Driver
     username: sa
     password:
-
+  properties:
+    hibernate:
+      show_sql: true
+      format_sql: true
+      use_sql_comments: true
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     defer-datasource-initialization: false
@@ -20,11 +24,25 @@ spring:
     user:
       name: nhs0912
       password: 1234
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    url: jdbc:h2:mem:jangsubeedb;NON_KEYWORDS=USER
+    user: sa
+    password:
 
 logging:
   level:
     com.jangsubee: TRACE
+  org:
+    hibernate:
+      type:
+        descriptor:
+          sql: trace
   jwt:
     header: Authorization
     secret: amFuZ3N1YmVlIENhbGVuZGFyIFByb2plY3QgbWFkZSBieSBuaHMwOTEyIAo=
     token-validity-in-seconds: 86400 #24 hours
+
+
+
