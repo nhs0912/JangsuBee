@@ -42,7 +42,7 @@ logging:
   jwt:
     header: Authorization
     secret: amFuZ3N1YmVlIENhbGVuZGFyIFByb2plY3QgbWFkZSBieSBuaHMwOTEyIAo=
-    token-validity-in-seconds: 86400 #24 hours
+    token-validity-in-seconds: 28800 #24 hours
 
 
 
